@@ -1,5 +1,24 @@
+#
+# REQUIRED FILES TO BUILD THIS IMAGE
+# ==================================
+# 
+# From http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html
+#  Download the following  file:
+#    - instantclient-basic-linux.x64-12.2.0.1.0.zip
+# Rename the file to instantclient_MajorVer_MinorVer.zip
+#     Ex instantclient_12_2.zip
+#
+# HOW TO BUILD THIS IMAGE
+# -----------------------
+# Put all downloaded files in the same directory as this Dockerfile
+# Run: 
+#      $ docker build -t oracle/instantclient:12.2.0.1 . 
+#
+#
+
 # SQL Server Command Line Tools, Oracle Instant client and Python 3.6
-FROM ubuntu:16.04
+ARG     ARG_BASE_IMAGE=ubuntu:16.04
+FROM    ${ARG_BASE_IMAGE}
 
 
 # apt-get and system utilities
@@ -20,10 +39,13 @@ RUN     curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - &
         update-locale LANG=en_US.UTF-8 
 
 # adding Oracle Client
+ARG     ARG_INST_CLIENT_MAJ_VER=12
+ARG     ARG_INST_CLIENT_MIN_VER=2
+ARG     ARG_INST_CLIENT=instantclient
 
-ENV     INST_CLIENT_MAJ_VER=12 \
-        INST_CLIENT_MIN_VER=2 
-ENV     INST_CLIENT=instantclient_${INST_CLIENT_MAJ_VER}_${INST_CLIENT_MIN_VER}
+ENV     INST_CLIENT_MAJ_VER=${ARG_INST_CLIENT_MAJ_VER} \
+        INST_CLIENT_MIN_VER=${ARG_INST_CLIENT_MIN_VER} 
+ENV     INST_CLIENT=${ARG_INST_CLIENT}_${INST_CLIENT_MAJ_VER}_${INST_CLIENT_MIN_VER}
 
 
 COPY    ${INST_CLIENT}.zip ./ 
