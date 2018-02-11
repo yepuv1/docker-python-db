@@ -2,15 +2,17 @@
 
 This GitHub repository provides a Dockerfile for developing applications that need to use Oracle and Microsoft SQL Server as databases. 
 
-## Building
 
-### Required files
+
+## Required files
 
 Download the Oracle Instant Client 12.2 Zips from OTN:
 
 http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html
 
-Rename the file *instantclient-basic-linux.x64-12.2.0.1.0.zip* to *instantclient_12_2.zip*.
+## Building
+
+Rename the downloaded file *instantclient-basic-linux.x64-12.2.0.1.0.zip* to *instantclient_12_2.zip*.
 
 Place the renamed Oracle Instant Client Zip (from the previous step) in the
 same directory as the `Dockerfile` and run:
