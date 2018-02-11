@@ -90,9 +90,9 @@ import cx_Oracle
 
 username = 'myuserid'
 password = '**********'
-database_name = 'mydb'
+database = 'mydb'
 
-connection = cx_Oracle.connect(username, password, database_name)
+connection = cx_Oracle.connect(username, password, database)
 cursor = connection.cursor()
 sql = "select 'Y' from dual"
 cursor.execute(sql)
