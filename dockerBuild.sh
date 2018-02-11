@@ -9,4 +9,4 @@ docker build  \
              --build-arg ARG_INST_CLIENT_MAJ_VER=${INST_CLIENT_MAJ_VER} \
              --build-arg ARG_INST_CLIENT_MIN_VER=${INST_CLIENT_MIN_VER} \
              --build-arg ARG_INST_CLIENT=${INST_CLIENT} \
-             --tag python3-base/ora-mssql:1.0 "$@" .
+             --tag python3-ora-mssql .
