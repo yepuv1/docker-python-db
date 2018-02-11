@@ -10,15 +10,13 @@ Here is the Microsoft documentation to connect to MS SQL Server:
 
 ## Resources
 
-#### Database Servers in Containers
-
 [Getting started guide for the SQL Server on Linux container](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 
 [Best practices guide](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-docker)
 
 [Oracle Database on Docker](https://github.com/oracle/docker-images/tree/master/OracleDatabase)
 
-#### Database Client Tools in Containers
+[Docker image contains the Oracle Instant Client](https://github.com/oracle/docker-images/tree/master/OracleInstantClient)
 
 [Python SQL Driver](https://docs.microsoft.com/en-us/sql/connect/python/python-driver-for-sql-server)
 
