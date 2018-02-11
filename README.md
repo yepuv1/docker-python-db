@@ -52,6 +52,9 @@ You can query the ODBC configuration using the following command:
 odbcinst -j
 ```
 ### Output
+
+The output of ``odbcinst -j``
+
 ```
 root@9b84d7019c0a:/# odbcinst -j
 unixODBC 2.3.1
@@ -62,6 +65,16 @@ USER DATA SOURCES..: /root/.odbc.ini
 SQLULEN Size.......: 8
 SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
+```
+
+The content of ``/etc/odbcinst.ini``
+
+```
+root@9b84d7019c0a:/# cat /etc/odbcinst.ini
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/microsoft/msodbcsql/lib64/libmsodbcsql-17.0.so.1.1
+UsageCount=1
 ```
 
 ## Python Examples
