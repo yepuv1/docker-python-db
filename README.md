@@ -21,9 +21,15 @@ same directory as the `Dockerfile` and run:
 ./dockerBuild.sh -v 1.0
 ```
 
-The pre-built image can be downloaded from
+The pre-built image can be downloaded using:
+
+```
+docker pull yepuv1/python3_ora_mss
+```
 
 [yepuv1/python3_ora_mss](https://cloud.docker.com/swarm/yepuv1/repository/docker/yepuv1/python3_ora_mss)
+
+
 
 
 ## Usage
