@@ -2,13 +2,12 @@
 
 This GitHub repository provides a Dockerfile for developing python applications that need to use Oracle and Microsoft SQL Server as databases. 
 
-
-
 ## Required files
 
 Download the Oracle Instant Client 12.2 Zips from OTN:
 
 http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html
+
 
 ## Building
 
@@ -27,6 +26,23 @@ You can run a container interactively:
 ```
 docker run -ti --rm python-ora-mss
 ```
+## Volumes
+
+The Docker image creates two volumes for ```data``` and ```logs```. The application folder structure is
+
+```
+\
+|
++---app
+|   |
+|   +---data (docker volume)
+|   |
+|   +---logs (docker volume)
+|   |
++---opt (database client tools install location)
+
+```
+
 
 ## Resources
 
