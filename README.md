@@ -24,7 +24,7 @@ same directory as the `Dockerfile` and run:
 You can run a container interactively:
 
 ```
-docker run -ti --rm python-ora-mss:1.0
+docker run -ti --rm python3_ora_mss:1.0
 ```
 ## Volumes
 
@@ -44,13 +44,33 @@ The Docker image creates two volumes for ```data``` and ```logs```. The applicat
 
 ```
 
+## ODBC Configuration 
+
+You can query the ODBC configuration using the following command:
+
+```
+odbcinst -j
+```
+### Output
+```
+root@9b84d7019c0a:/# odbcinst -j
+unixODBC 2.3.1
+DRIVERS............: /etc/odbcinst.ini
+SYSTEM DATA SOURCES: /etc/odbc.ini
+FILE DATA SOURCES..: /etc/ODBCDataSources
+USER DATA SOURCES..: /root/.odbc.ini
+SQLULEN Size.......: 8
+SQLLEN Size........: 8
+SQLSETPOSIROW Size.: 8
+```
+
 ## Python Examples
 
 This image can be extended to an application needs. The following examples show how to connect to different databases using Python language.
 
 ### Oracle
 
-Create a ```tnsnames.ora``` file and point the ```TNS_ADMIN``` environment variable to it.
+Create a ```tnsnames.ora``` file and point the ```TNS_ADMIN``` environment variable to it. By default the ```TNS_ADMIN``` is initialized to ```/opt/oracle/instantclient_12_2```
 
 ```
 import cx_Oracle
