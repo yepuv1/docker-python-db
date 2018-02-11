@@ -44,6 +44,75 @@ The Docker image creates two volumes for ```data``` and ```logs```. The applicat
 
 ```
 
+## Python Examples
+
+### Oracle
+
+Create a ```tnsnames.ora``` file and point the ```TNS_ADMIN``` environment variable to it.
+
+```
+import cx_Oracle
+
+username = 'myuserid'
+password = '**********'
+database_name = 'mydb'
+
+connection = cx_Oracle.connect(username, password, database_name)
+cursor = connection.cursor()
+sql = "select 'Y' from dual"
+cursor.execute(sql)
+
+for row_data in cursor:
+    print(row_data)
+cursor.close()
+```
+
+### Microsoft SQL Server
+
+```
+import pyodbc
+
+server = 'myserver'
+database = 'mydb'
+username = 'myuserid'
+password = '********
+cnxn_str = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password
+
+connection = pyodbc.connect(cnxn_str)
+cursor = connection.cursor()
+sql = "SELECT @@version;"
+cursor.execute(sql)
+
+for row_data in cursor:
+    print(row_data)
+
+cursor.close()
+connection.close()
+```
+
+### MySQL
+
+```
+import pymysql.cursors
+
+host = 'myserver'
+user = 'myuserid'
+password = '*******'
+db = 'mydb'
+charset = 'utf8mb4'
+port = 3306
+
+cnxn = pymysql.connect(host=host, port=port, user=user, db=db, charset=charset, cursorclass=pymysql.cursors.Cursor)
+cursor = cnxn.cursor()
+sql = "SELECT @@version;"
+cursor.execute(sql)
+
+for row_data in cursor: 
+    print(row_data)
+    
+cursor.close()
+cnxn.close()
+```
 
 ## Resources
 
