@@ -46,6 +46,8 @@ The Docker image creates two volumes for ```data``` and ```logs```. The applicat
 
 ## Python Examples
 
+This image can be extended to an application needs. The following examples show how to connect to different databases using Python language.
+
 ### Oracle
 
 Create a ```tnsnames.ora``` file and point the ```TNS_ADMIN``` environment variable to it.
