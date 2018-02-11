@@ -1,3 +1,4 @@
+
 # Python with Oracle Instant Client 12.2, Microsoft SQL Server ODBC 2017 in Docker
 
 This GitHub repository provides a Dockerfile for developing python applications that need to use Oracle, Microsoft SQL Server and MySQL as databases. 
@@ -19,6 +20,12 @@ same directory as the `Dockerfile` and run:
 ```
 ./dockerBuild.sh -v 1.0
 ```
+
+The pre-built image can be downloaded from
+
+[yepuv1/python3_ora_mss](https://cloud.docker.com/swarm/yepuv1/repository/docker/yepuv1/python3_ora_mss)
+
+
 ## Usage
 
 You can run a container interactively:
@@ -26,6 +33,7 @@ You can run a container interactively:
 ```
 docker run -ti --rm python3_ora_mss:1.0
 ```
+
 ## Volumes
 
 The Docker image creates two volumes for ```data``` and ```logs```. The application folder structure is
