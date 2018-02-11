@@ -1,6 +1,6 @@
 # Python with Oracle Instant Client 12.2, Microsoft SQL Server ODBC 2017 in Docker
 
-This GitHub repository provides a Dockerfile for developing python applications that need to use Oracle and Microsoft SQL Server as databases. 
+This GitHub repository provides a Dockerfile for developing python applications that need to use Oracle, Microsoft SQL Server and MySQL as databases. 
 
 ## Required files
 
