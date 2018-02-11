@@ -6,7 +6,7 @@ This GitHub repository provides a Dockerfile for developing applications that ne
 
 Here is the Microsoft documentation to connect to MS SQL Server:
 
-[Python SQL Driver](https://docs.microsoft.com/en-us/sql/connect/python/python-driver-for-sql-server)
+
 
 ## Resources
 
@@ -19,6 +19,8 @@ Here is the Microsoft documentation to connect to MS SQL Server:
 [Oracle Database on Docker](https://github.com/oracle/docker-images/tree/master/OracleDatabase)
 
 #### Database Client Tools in Containers
+
+[Python SQL Driver](https://docs.microsoft.com/en-us/sql/connect/python/python-driver-for-sql-server)
 
 **SQL Server Command Line Tools(sqlcmd,bcp)** are also available as a Docker Image. You can now deliver SQL Server management payload using this as a base image for your CI/CD scenarios. Check out the [mssql-tools Docker Image](https://hub.docker.com/r/microsoft/mssql-tools/) to get started.
 
