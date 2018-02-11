@@ -24,7 +24,7 @@ same directory as the `Dockerfile` and run:
 You can run a container interactively:
 
 ```
-docker run -ti --rm python-ora-mss
+docker run -ti --rm python-ora-mss:1.0
 ```
 ## Volumes
 
