@@ -75,7 +75,7 @@ import pyodbc
 server = 'myserver'
 database = 'mydb'
 username = 'myuserid'
-password = '********
+password = '********'
 cnxn_str = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password
 
 connection = pyodbc.connect(cnxn_str)
@@ -127,11 +127,3 @@ cnxn.close()
 [Python SQL Driver](https://docs.microsoft.com/en-us/sql/connect/python/python-driver-for-sql-server)
 
 [cx_Oracle - Python Interface for Oracle Database](https://oracle.github.io/python-cx_Oracle/)
-
-**SQL Server Command Line Tools(sqlcmd,bcp)** are also available as a Docker Image. You can now deliver SQL Server management payload using this as a base image for your CI/CD scenarios. Check out the [mssql-tools Docker Image](https://hub.docker.com/r/microsoft/mssql-tools/) to get started.
-
-
-Visit the [Microsoft Docker Hub page](https://hub.docker.com/u/microsoft) for more information and additional images.
-
-
-
