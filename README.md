@@ -38,7 +38,8 @@ The Docker image creates two volumes for ```data``` and ```logs```. The applicat
 |   +---data (docker volume)
 |   |
 |   +---logs (docker volume)
-|   |
+| 
+|
 +---opt (database client tools install location)
 
 ```
