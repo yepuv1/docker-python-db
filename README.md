@@ -20,6 +20,8 @@ Here is the Microsoft documentation to connect to MS SQL Server:
 
 [Python SQL Driver](https://docs.microsoft.com/en-us/sql/connect/python/python-driver-for-sql-server)
 
+[cx_Oracle - Python Interface for Oracle Database](https://oracle.github.io/python-cx_Oracle/)
+
 **SQL Server Command Line Tools(sqlcmd,bcp)** are also available as a Docker Image. You can now deliver SQL Server management payload using this as a base image for your CI/CD scenarios. Check out the [mssql-tools Docker Image](https://hub.docker.com/r/microsoft/mssql-tools/) to get started.
 
 
